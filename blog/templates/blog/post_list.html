@@ -8,19 +8,49 @@
 </head>
 <body>
 <div>
-    <h1><a href="/">Django Girls Blog</a></h1>
+    <center><h1><a href="/">Django Girls Blog</a></h1><center>
 </div>
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Me</title>
+</head>
+
+<body background="http://wallpapercave.com/wp/xY0XVZW.jpg">
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<center>
+<ul>
+  <li><a href="#home" id="Home">Home</a></li>
+  <li><a href="#Work" id="Work">Work</a></li>
+    </div>
+  </li>
+</ul>
+</center>
+
+
+
+
+
+
+
+
+</body>
+</html>
 <div class="content container">
     <div class="row">
         <div class="col-md-8">
             {% for post in posts %}
                 <div class="post">
+                  <h1><a href="">{{ post.title }}</a></h1>
+                  <p>{{ post.text|linebreaksbr }}</p>
                     <div class="date">
                         <p>published: {{ post.published_date }}</p>
                     </div>
-                    <h1><a href="">{{ post.title }}</a></h1>
-                    <p>{{ post.text|linebreaksbr }}</p>
+
                 </div>
             {% endfor %}
         </div>
